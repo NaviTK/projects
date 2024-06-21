@@ -1,0 +1,17 @@
+C:\Users\ivago\source\repos\buscaminas\bin\Debug\net7.0-windows\buscaminas.exe
+C:\Users\ivago\source\repos\buscaminas\bin\Debug\net7.0-windows\buscaminas.deps.json
+C:\Users\ivago\source\repos\buscaminas\bin\Debug\net7.0-windows\buscaminas.runtimeconfig.json
+C:\Users\ivago\source\repos\buscaminas\bin\Debug\net7.0-windows\buscaminas.dll
+C:\Users\ivago\source\repos\buscaminas\bin\Debug\net7.0-windows\buscaminas.pdb
+C:\Users\ivago\source\repos\buscaminas\obj\Debug\net7.0-windows\buscaminas.csproj.AssemblyReference.cache
+C:\Users\ivago\source\repos\buscaminas\obj\Debug\net7.0-windows\buscaminas.Form1.resources
+C:\Users\ivago\source\repos\buscaminas\obj\Debug\net7.0-windows\buscaminas.csproj.GenerateResource.cache
+C:\Users\ivago\source\repos\buscaminas\obj\Debug\net7.0-windows\buscaminas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ivago\source\repos\buscaminas\obj\Debug\net7.0-windows\buscaminas.AssemblyInfoInputs.cache
+C:\Users\ivago\source\repos\buscaminas\obj\Debug\net7.0-windows\buscaminas.AssemblyInfo.cs
+C:\Users\ivago\source\repos\buscaminas\obj\Debug\net7.0-windows\buscaminas.csproj.CoreCompileInputs.cache
+C:\Users\ivago\source\repos\buscaminas\obj\Debug\net7.0-windows\buscaminas.dll
+C:\Users\ivago\source\repos\buscaminas\obj\Debug\net7.0-windows\refint\buscaminas.dll
+C:\Users\ivago\source\repos\buscaminas\obj\Debug\net7.0-windows\buscaminas.pdb
+C:\Users\ivago\source\repos\buscaminas\obj\Debug\net7.0-windows\buscaminas.genruntimeconfig.cache
+C:\Users\ivago\source\repos\buscaminas\obj\Debug\net7.0-windows\ref\buscaminas.dll
