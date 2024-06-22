@@ -47,7 +47,7 @@ namespace buscaminas
             tablerocon.Location = new Point(103, 251);
             tablerocon.Margin = new Padding(3, 4, 3, 4);
             tablerocon.Name = "tablerocon";
-            tablerocon.Size = new Size(600, 400);
+            tablerocon.Size = new Size(400, 400);
             tablerocon.TabIndex = 0;
             // 
             // tbdefilas
@@ -57,6 +57,7 @@ namespace buscaminas
             tbdefilas.Name = "tbdefilas";
             tbdefilas.Size = new Size(45, 27);
             tbdefilas.TabIndex = 1;
+            tbdefilas.Text = "4";
             // 
             // tbdecolumnas
             // 
@@ -65,6 +66,7 @@ namespace buscaminas
             tbdecolumnas.Name = "tbdecolumnas";
             tbdecolumnas.Size = new Size(45, 27);
             tbdecolumnas.TabIndex = 2;
+            tbdecolumnas.Text = "4";
             // 
             // label1
             // 
@@ -102,9 +104,9 @@ namespace buscaminas
             label3.AutoSize = true;
             label3.Location = new Point(81, 107);
             label3.Name = "label3";
-            label3.Size = new Size(211, 20);
+            label3.Size = new Size(194, 20);
             label3.TabIndex = 6;
-            label3.Text = "x and y have to be less than 40";
+            label3.Text = "x and y must be less than 40";
             // 
             // checkBox1
             // 
