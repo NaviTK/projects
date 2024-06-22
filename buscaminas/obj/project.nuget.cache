@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "4ZGGnZV+OjH11HwCx5Tw3sxjzVS26dc61O9DQCvz5/p9lR7xhFbmV7LRPcBFKG9YHoDkLhCP8w0btqrao09KTA==",
+  "dgSpecHash": "t/izYvNkw9w=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ivago\\source\\repos\\buscaminas\\buscaminas.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Ivan\\OneDrive\\Documentos\\GitHub\\projects\\buscaminas\\buscaminas.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ivan\\.nuget\\packages\\magick.net-q16-anycpu\\13.9.1\\magick.net-q16-anycpu.13.9.1.nupkg.sha512",
+    "C:\\Users\\Ivan\\.nuget\\packages\\magick.net.core\\13.9.1\\magick.net.core.13.9.1.nupkg.sha512"
+  ],
   "logs": []
 }

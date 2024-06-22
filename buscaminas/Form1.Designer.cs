@@ -39,36 +39,40 @@ namespace buscaminas
             label2 = new Label();
             GENERAR = new Button();
             label3 = new Label();
+            checkBox1 = new CheckBox();
             SuspendLayout();
             // 
             // tablerocon
             // 
-            tablerocon.Location = new Point(90, 188);
+            tablerocon.Location = new Point(103, 251);
+            tablerocon.Margin = new Padding(3, 4, 3, 4);
             tablerocon.Name = "tablerocon";
             tablerocon.Size = new Size(600, 400);
             tablerocon.TabIndex = 0;
             // 
             // tbdefilas
             // 
-            tbdefilas.Location = new Point(90, 44);
+            tbdefilas.Location = new Point(103, 59);
+            tbdefilas.Margin = new Padding(3, 4, 3, 4);
             tbdefilas.Name = "tbdefilas";
-            tbdefilas.Size = new Size(40, 23);
+            tbdefilas.Size = new Size(45, 27);
             tbdefilas.TabIndex = 1;
             // 
             // tbdecolumnas
             // 
-            tbdecolumnas.Location = new Point(181, 44);
+            tbdecolumnas.Location = new Point(207, 59);
+            tbdecolumnas.Margin = new Padding(3, 4, 3, 4);
             tbdecolumnas.Name = "tbdecolumnas";
-            tbdecolumnas.Size = new Size(40, 23);
+            tbdecolumnas.Size = new Size(45, 27);
             tbdecolumnas.TabIndex = 2;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(56, 39);
+            label1.Location = new Point(64, 52);
             label1.Name = "label1";
-            label1.Size = new Size(28, 28);
+            label1.Size = new Size(35, 35);
             label1.TabIndex = 3;
             label1.Text = "X:";
             // 
@@ -76,17 +80,18 @@ namespace buscaminas
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(148, 39);
+            label2.Location = new Point(169, 52);
             label2.Name = "label2";
-            label2.Size = new Size(27, 28);
+            label2.Size = new Size(34, 35);
             label2.TabIndex = 4;
             label2.Text = "Y:";
             // 
             // GENERAR
             // 
-            GENERAR.Location = new Point(264, 39);
+            GENERAR.Location = new Point(302, 52);
+            GENERAR.Margin = new Padding(3, 4, 3, 4);
             GENERAR.Name = "GENERAR";
-            GENERAR.Size = new Size(400, 120);
+            GENERAR.Size = new Size(457, 160);
             GENERAR.TabIndex = 5;
             GENERAR.Text = "GENERAR";
             GENERAR.UseVisualStyleBackColor = true;
@@ -95,17 +100,29 @@ namespace buscaminas
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(71, 80);
+            label3.Location = new Point(81, 107);
             label3.Name = "label3";
-            label3.Size = new Size(167, 15);
+            label3.Size = new Size(211, 20);
             label3.TabIndex = 6;
             label3.Text = "x and y have to be less than 40";
             // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(81, 155);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(167, 24);
+            checkBox1.TabIndex = 7;
+            checkBox1.Text = "enquadrar imagenes";
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(984, 961);
+            ClientSize = new Size(1125, 1055);
+            Controls.Add(checkBox1);
             Controls.Add(label3);
             Controls.Add(GENERAR);
             Controls.Add(label2);
@@ -113,6 +130,7 @@ namespace buscaminas
             Controls.Add(tbdecolumnas);
             Controls.Add(tbdefilas);
             Controls.Add(tablerocon);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -128,5 +146,6 @@ namespace buscaminas
         private Label label2;
         private Button GENERAR;
         private Label label3;
+        private CheckBox checkBox1;
     }
 }

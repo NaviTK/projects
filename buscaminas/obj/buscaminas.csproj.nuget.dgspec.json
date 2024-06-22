@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ivago\\source\\repos\\buscaminas\\buscaminas.csproj": {}
+    "C:\\Users\\Ivan\\OneDrive\\Documentos\\GitHub\\projects\\buscaminas\\buscaminas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ivago\\source\\repos\\buscaminas\\buscaminas.csproj": {
+    "C:\\Users\\Ivan\\OneDrive\\Documentos\\GitHub\\projects\\buscaminas\\buscaminas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ivago\\source\\repos\\buscaminas\\buscaminas.csproj",
+        "projectUniqueName": "C:\\Users\\Ivan\\OneDrive\\Documentos\\GitHub\\projects\\buscaminas\\buscaminas.csproj",
         "projectName": "buscaminas",
-        "projectPath": "C:\\Users\\ivago\\source\\repos\\buscaminas\\buscaminas.csproj",
-        "packagesPath": "C:\\Users\\ivago\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ivago\\source\\repos\\buscaminas\\obj\\",
+        "projectPath": "C:\\Users\\Ivan\\OneDrive\\Documentos\\GitHub\\projects\\buscaminas\\buscaminas.csproj",
+        "packagesPath": "C:\\Users\\Ivan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ivan\\OneDrive\\Documentos\\GitHub\\projects\\buscaminas\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ivago\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,11 +39,22 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
+          "dependencies": {
+            "Magick.NET-Q16-AnyCPU": {
+              "target": "Package",
+              "version": "[13.9.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,7 +74,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
