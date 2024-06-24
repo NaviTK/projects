@@ -70,19 +70,13 @@ namespace buscaminas
             public const string sin_inicializar = "sin_inicializar";
             public struct Numerada
             {
-                public readonly string n1; public readonly string n2;
-                public readonly string n3; public readonly string n4;
-                public readonly string n5; public readonly string n6;
-                public readonly string n7; public readonly string n8;
-                public Numerada()
-                {
-                    n1 = "numero1"; n2 = "numero2";
-                    n3 = "numero3"; n4 = "numero4";
-                    n5 = "numero5"; n6 = "numero6"; 
-                    n7 = "numero7"; n8 = "numero8";
-                }
+                public const string n1 = "numero1"; public const string n2 = "numero2";
+                public const string n3 = "numero3"; public const string n4 = "numero4";
+                public const string n5 = "numero5"; public const string n6 = "numero6";
+                public const string n7 = "numero7"; public const string n8 = "numero8";
           
             }
+            //public Numerada numerada;
         }
         static class resize_factor
         {
@@ -203,15 +197,40 @@ namespace buscaminas
         }
         private void actualiza_tablero()
         {
+            string path_to_ini = root+"/imagenes/"; // path_to_ini + <nombre_imagen.png>
+            string path_to_rs = path_to_ini; // path_to_rs + <nombre_imagen_resized>
             for (int i = 0; i < tablero.GetLength(0); i++)
             {
                 for (int j = 0; j < tablero.GetLength(1); j++)
                 {
                     switch(mat.matx[i* tablero.GetLength(1) + j].EstadoCelda)
                     {
-
+                        case cell_state.Numerada.n1:
+                            break;
+                        case cell_state.Numerada.n2:
+                            break;
+                        case cell_state.Numerada.n3:
+                            break;
+                        case cell_state.Numerada.n4:
+                            break;
+                        case cell_state.Numerada.n5:
+                            break;
+                        case cell_state.Numerada.n6:
+                            break;
+                        case cell_state.Numerada.n7:
+                            break;
+                        case cell_state.Numerada.n8:
+                            break;
+                        case cell_state.marcada:
+                            break;
+                        case cell_state.blanco:
+                            break;
+                        case cell_state.sin_inicializar:
+                            break;
+                        default:
+                            break;
                     }
-                    tablero[i, j].Image = null;
+                    tablero[i, j].Image = Image.FromFile(path_to_ini);
                 }
             }
         }
