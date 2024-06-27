@@ -1,2 +1,2 @@
 # projects
-mai projects
+functional minesweeper

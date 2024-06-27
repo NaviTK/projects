@@ -1,6 +1,7 @@
 using ImageMagick;
 using Microsoft.VisualBasic.Devices;
 using Microsoft.Win32;
+using System;
 using System.CodeDom;
 using System.Configuration;
 using System.Drawing.Imaging;
@@ -13,7 +14,7 @@ using System.Windows.Forms;
 
 namespace buscaminas
 {
-    public partial class Form1 : Form
+    public partial class Buscaminitas : Form
     {
         //clases definidas
         public struct Pair
@@ -92,15 +93,14 @@ namespace buscaminas
         PictureBox[,] tablero;
         bool first_time = true;
         bool first_click = true;
-        bool casillas_quadradas = false;
         int filas = 0;
         int columnas = 0;
         int sizeframe_h = 0;
         int sizeframe_v = 0;
-        int dificultat = 1; // 3-> facil, 2->intermedia, 1-->dificil se modificara con botones mas adelante
+        int dificultat = 3; // 3-> facil, 2->intermedia, 1-->dificil se modificara con botones mas adelante
         bool ended;
         Matriz mat;
-        public Form1()
+        public Buscaminitas()
         {
             InitializeComponent();
             filas = Int32.Parse(tbdefilas.Text);
@@ -180,6 +180,20 @@ namespace buscaminas
         //post matriz rellenada con bombas en funcion de la dificultat
         private void posiciona_bombas(int celda_inicial)
         {
+            switch (Int32.Parse(DifficultyBox.Text))
+            {
+                case 1:
+                    dificultat = 3; //facil
+                    break;
+                case 2:
+                    dificultat = 2; //medio
+                    break;
+                case 3:
+                    dificultat = 1; //dificil
+                    break;
+                default:
+                    break;
+            }
             int numero_de_bombas = (tablero.GetLength(0) * tablero.GetLength(1)) / (4 * dificultat);
             Random random = new Random();
             for (int i = 0; i < numero_de_bombas; i++)
@@ -199,9 +213,9 @@ namespace buscaminas
             int nc = tablero.GetLength(1);
             int nf = tablero.GetLength(0);
             if (celda / nc == 0 && mov_v == -1) return false;
-            if (celda / nc == nf-1 && mov_v == 1) return false;
+            if (celda / nc == nf - 1 && mov_v == 1) return false;
             if (celda % nc == 0 && mov_h == -1) return false;
-            if (celda % nc == nc-1 && mov_h == 1) return false;
+            if (celda % nc == nc - 1 && mov_h == 1) return false;
             return true;
         }
         private int cuenta_bombas(int mi_celda, ref Pair[] adj)
@@ -304,6 +318,41 @@ namespace buscaminas
                 ended = true;
             }
         }
+        private void bfs_enblanquecedor(int mi_celda)
+        {
+            Pair[] adj = new Pair[9];adj[0] = new Pair(-1, -1);adj[1] = new Pair(0, -1);
+            adj[2] = new Pair(1, -1);adj[3] = new Pair(-1, 0);adj[4] = new Pair(0, 0);
+            adj[5] = new Pair(1, 0);adj[6] = new Pair(-1, 1);adj[7] = new Pair(0, 1);
+            adj[8] = new Pair(1, 1);
+            Queue<int> cola = new Queue<int>();
+            cola.Enqueue(mi_celda);
+            bool[] visited = new bool[tablero.GetLength(0) * tablero.GetLength(1)]; // se inicializa automaticamente en false
+            for (int i = 0; i < visited.Length; i++) visited[i] = false;
+            while (cola.Any()) // devuelve true si contien algun elemento
+            {
+                int casilla = cola.First();
+                cola.Dequeue();
+                if (!visited[casilla])
+                {
+                    visited[casilla] = true;
+                    if (mat.matx[casilla].EstadoCelda == cell_state.sin_inicializar)
+                    {
+                        int num_bombas;
+                        if ((num_bombas = cuenta_bombas(casilla, ref adj)) != 0) 
+                            mat.matx[casilla].EstadoCelda = "numero" + num_bombas.ToString();
+                        else mat.matx[casilla].EstadoCelda = cell_state.blanco;
+                    }
+                    if (mat.matx[casilla].EstadoCelda == cell_state.blanco)
+                    {
+                        for (int i = 0; i < 9; i++)
+                        {
+                            int cas_temp = casilla + adj[i].first + (adj[i].second * tablero.GetLength(1));
+                            if (pos_ok(casilla, adj[i].first, adj[i].second)) cola.Enqueue(cas_temp);
+                        }
+                    }
+                }
+            }
+        }
         private void click_cell(object sender, MouseEventArgs e)
         {
             //picture es la cajita
@@ -372,9 +421,10 @@ namespace buscaminas
                             break;
                     }
                 }
+                if (mat.matx[mi_celda].EstadoCelda == cell_state.blanco) bfs_enblanquecedor(mi_celda);
             }
             actualiza_tablero();
-            if(!ended) Comprueba_victoria();
+            if (!ended) Comprueba_victoria();
         }
         private void limpia_picture_box()
         {
@@ -401,11 +451,9 @@ namespace buscaminas
             if (x <= 0 || x > 40 || y <= 0 || y > 40) MessageBox.Show("       X AND Y must be \n    less or equal than 40");
             else gt(x, y);
         }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void bar_Scroll(object sender, ScrollEventArgs e)
         {
-            if (casillas_quadradas) casillas_quadradas = !casillas_quadradas;
-            //.... mismo codigo que generar
+            DifficultyBox.Text = (bar.Value / 4).ToString();
         }
     }
 }

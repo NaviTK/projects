@@ -60,7 +60,6 @@ C:\Users\ivago\OneDrive\Documentos\GitHub\projects\buscaminas\bin\Debug\net7.0-w
 C:\Users\ivago\OneDrive\Documentos\GitHub\projects\buscaminas\bin\Debug\net7.0-windows\runtimes\win-x64\native\Magick.Native-Q16-x64.dll
 C:\Users\ivago\OneDrive\Documentos\GitHub\projects\buscaminas\bin\Debug\net7.0-windows\runtimes\win-x86\native\Magick.Native-Q16-x86.dll
 C:\Users\ivago\OneDrive\Documentos\GitHub\projects\buscaminas\obj\Debug\net7.0-windows\buscaminas.csproj.AssemblyReference.cache
-C:\Users\ivago\OneDrive\Documentos\GitHub\projects\buscaminas\obj\Debug\net7.0-windows\buscaminas.Form1.resources
 C:\Users\ivago\OneDrive\Documentos\GitHub\projects\buscaminas\obj\Debug\net7.0-windows\buscaminas.csproj.GenerateResource.cache
 C:\Users\ivago\OneDrive\Documentos\GitHub\projects\buscaminas\obj\Debug\net7.0-windows\buscaminas.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\ivago\OneDrive\Documentos\GitHub\projects\buscaminas\obj\Debug\net7.0-windows\buscaminas.AssemblyInfoInputs.cache
@@ -72,3 +71,4 @@ C:\Users\ivago\OneDrive\Documentos\GitHub\projects\buscaminas\obj\Debug\net7.0-w
 C:\Users\ivago\OneDrive\Documentos\GitHub\projects\buscaminas\obj\Debug\net7.0-windows\buscaminas.pdb
 C:\Users\ivago\OneDrive\Documentos\GitHub\projects\buscaminas\obj\Debug\net7.0-windows\buscaminas.genruntimeconfig.cache
 C:\Users\ivago\OneDrive\Documentos\GitHub\projects\buscaminas\obj\Debug\net7.0-windows\ref\buscaminas.dll
+C:\Users\ivago\OneDrive\Documentos\GitHub\projects\buscaminas\obj\Debug\net7.0-windows\buscaminas.Buscaminitas.resources

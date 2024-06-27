@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 
 namespace buscaminas
 {
-    partial class Form1
+    partial class Buscaminitas
     {
         /// <summary>
         ///  Required designer variable.
@@ -39,7 +39,9 @@ namespace buscaminas
             label2 = new Label();
             GENERAR = new Button();
             label3 = new Label();
-            checkBox1 = new CheckBox();
+            bar = new HScrollBar();
+            label4 = new Label();
+            DifficultyBox = new TextBox();
             SuspendLayout();
             // 
             // tablerocon
@@ -104,24 +106,48 @@ namespace buscaminas
             label3.TabIndex = 6;
             label3.Text = "x and y must be less or equal than 40";
             // 
-            // checkBox1
+            // bar
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(87, 124);
-            checkBox1.Margin = new Padding(3, 2, 3, 2);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(134, 19);
-            checkBox1.TabIndex = 7;
-            checkBox1.Text = "enquadrar imagenes";
-            checkBox1.UseVisualStyleBackColor = true;
-            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            bar.LargeChange = 1;
+            bar.Location = new Point(252, 148);
+            bar.Maximum = 12;
+            bar.Minimum = 4;
+            bar.Name = "bar";
+            bar.Size = new Size(135, 28);
+            bar.TabIndex = 8;
+            bar.Value = 4;
+            bar.Scroll += bar_Scroll;
             // 
-            // Form1
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(239, 120);
+            label4.Name = "label4";
+            label4.Size = new Size(75, 21);
+            label4.TabIndex = 9;
+            label4.Text = "Difficulty:";
+            // 
+            // DifficultyBox
+            // 
+            DifficultyBox.BorderStyle = BorderStyle.FixedSingle;
+            DifficultyBox.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            DifficultyBox.Location = new Point(320, 118);
+            DifficultyBox.Name = "DifficultyBox";
+            DifficultyBox.ReadOnly = true;
+            DifficultyBox.Size = new Size(13, 27);
+            DifficultyBox.TabIndex = 10;
+            DifficultyBox.Text = "1";
+            // 
+            // Buscaminitas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(984, 791);
-            Controls.Add(checkBox1);
+            Controls.Add(DifficultyBox);
+            Controls.Add(label4);
+            Controls.Add(bar);
             Controls.Add(label3);
             Controls.Add(GENERAR);
             Controls.Add(label2);
@@ -129,8 +155,8 @@ namespace buscaminas
             Controls.Add(tbdecolumnas);
             Controls.Add(tbdefilas);
             Controls.Add(tablerocon);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "Buscaminitas";
+            Text = "Buscaminitas";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -144,6 +170,8 @@ namespace buscaminas
         private Label label2;
         private Button GENERAR;
         private Label label3;
-        private CheckBox checkBox1;
+        private HScrollBar bar;
+        private Label label4;
+        private TextBox DifficultyBox;
     }
 }
