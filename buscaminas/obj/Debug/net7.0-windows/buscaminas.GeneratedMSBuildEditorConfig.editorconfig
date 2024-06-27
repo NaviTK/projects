@@ -14,6 +14,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = buscaminas
-build_property.ProjectDir = C:\Users\Ivan\OneDrive\Documentos\GitHub\projects\buscaminas\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = C:\Users\ivago\OneDrive\Documentos\GitHub\projects\buscaminas\
