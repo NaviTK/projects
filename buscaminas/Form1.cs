@@ -328,10 +328,9 @@ namespace buscaminas
             cola.Enqueue(mi_celda);
             bool[] visited = new bool[tablero.GetLength(0) * tablero.GetLength(1)]; // se inicializa automaticamente en false
             for (int i = 0; i < visited.Length; i++) visited[i] = false;
-            while (cola.Any()) // devuelve true si contien algun elemento
+            while (cola.Any()) // devuelve true si contiene algun elemento
             {
-                int casilla = cola.First();
-                cola.Dequeue();
+                int casilla = cola.Dequeue();
                 if (!visited[casilla])
                 {
                     visited[casilla] = true;
